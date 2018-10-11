@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{
+	background-color:orchid;
+}
+
+button{
+    padding:10px;
+    color:red;
+}
+
+button:hover{
+	background-color:green;
+}
+
+button:active{
+	background-color:red;
+}
+
+</style>
+</head>
+<body id="BG">
+
+<img id="myimg" src="http://resource.pokemon-project.com/Pikachu/FLASH%20-%20Pikachu%20Sentado.png" width="700">
+
+<h2 id="message">The Button Element</h2>
+<button type="button" onclick="changeBGred()">Change BG to Red</button>
+<button type="button" onclick="changeBGblue()">Change BG to Blue</button>
+ 
+
+<button type="button" onclick="changeimage1()">Change image1</button>
+<button type="button" onclick="changeimage2()">Change image2 </button>
+
+<script>
+
+var image1="https://pokemongolive.com/img/posts/gobirthday.jpg";
+
+var image2="http://mosthdwallpapers.com/wp-content/uploads/2016/09/Pokemon-Hero-Pikachu-HD-Wallpaper.jpg";
+
+function changeimage1()
+{
+
+var imgelement= document.getElementById("myimg");
+imgelement.src=image1;
+
+clickedButton();
+
+}
+
+function changeimage2()
+{
+
+var imgelement= document.getElementById("myimg");
+imgelement.src=image2;
+
+clickedButton();
+
+}
+
+
+
+function changeBGred()
+{
+
+var BGelement= document.getElementById("BG");
+BGelement.style.backgroundColor="red";
+
+clickedButton();
+
+}
+
+
+function changeBGblue()
+{
+
+var BGelement= document.getElementById("BG");
+BGelement.style.backgroundColor="blue";
+
+clickedButton();
+
+}
+
+var numberOfClicks=0;
+
+function clickedButton()
+{
+  //1.
+  numberOfClicks = numberOfClicks +1;
+  //2.
+  var messageElement= document.getElementById("message"); 
+   //3.
+   messageElement.innerHTML="YOU HAVE CLICKED "+numberOfClicks+" times.";
+}
+
+
+</script>
+
+
+ 
+ 
+</body>
+</html>
